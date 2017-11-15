@@ -62,17 +62,19 @@ module.exports = function(grunt) {
 					'ion.rangeSlider.skinHTML5_d3scatter.css'];			   
     var src = [projectHome + 'app/views/**/*.html.erb'];
 	var purifycss = {
-			options: {}
-		};
+		options: {
+			rejected: true
+		}
+	};
 	var purifycssMultiTasks = [];
 	for (var i=0; i<jsFiles.length; i++)
 		src.push(jsDir + jsFiles[i]);
 	for (i=0; i<cssFiles.length; i++) {
 		purifycss['target'+(i+1)] = {
-				src: src,
-				css: [cssDir + cssFiles[i]],
-				dest: 'out/' + cssFiles[i]
-			};
+			src: src,
+			css: [cssDir + cssFiles[i]],
+			dest: 'out/' + cssFiles[i]
+		};
 		purifycssMultiTasks.push('purifycss:target'+(i+1));	
 	}
 		

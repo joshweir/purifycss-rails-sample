@@ -1,6 +1,6 @@
 # PurifyCSS Rails Sample
 
-Run [PurifyCSS](https://github.com/purifycss/purifycss) using grunt ([grunt-purifycss](https://github.com/purifycss/grunt-purifycss) against a rails project's assets. 
+Run [PurifyCSS](https://github.com/purifycss/purifycss) using grunt ([grunt-purifycss](https://github.com/purifycss/grunt-purifycss)) against a rails project's assets. 
 
 ## Getting Started
 Requires Grunt `~0.4.5`
@@ -16,4 +16,8 @@ In `gruntfile.js`, update html, js, css assets specific to your Rails project.
 
 ## Usage
 
-`grunt purifycssmulti`
+```shell
+grunt purifycssmulti
+```
+
+Purified files are dumped to `out/`.
